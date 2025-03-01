@@ -30,6 +30,19 @@ def isPalindrome(num):
         return True
     return False
 
+def reverseWithXSpace(num):
+    # same as reverseDigits(), hence skipping
+    pass
+
+def largest_Digit(num):
+    result = 0
+    while num > 0:
+        rem = rem % 10
+        if rem > result:
+            result = rem
+        num = num // 10
+    return result
+
 nums = 12321
 print(isPalindrome(123))
 print(isPalindrome(121))
