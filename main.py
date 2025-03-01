@@ -73,7 +73,23 @@ def firstAndLastDigit(num):
     first_digit = num
     return f"fist digit: {first_digit} last digit: {last_digit}"
 
+def isArmstrongNumber(num):
+    cpy = num
+    power = countDigits(num)
+    result = 0
+    while num > 0:
+        rem  = num % 10
+        result = result + (rem ** power)
+        num = num // 10
+    if result == cpy:
+        return f"{cpy} is an armstrong number."
+    else:
+        return f"{cpy} is not an armstrong number."
+
 nums = 12321
+print(isArmstrongNumber(nums))
+print(isArmstrongNumber(153))
+print(isArmstrongNumber(2497))
 print(firstAndLastDigit(nums))
 print(firstAndLastDigit(12345))
 print(countEvenOddDigits(nums))
