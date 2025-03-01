@@ -43,7 +43,35 @@ def largest_Digit(num):
         num = num // 10
     return result
 
+def productOfDigits(num):
+    result = 1
+    while num > 0:
+        rem = num % 10
+        result = result * rem
+        num = num // 10
+    return result
+
+def powerOf2(num):
+    return num > 0 and (num & (num-1)) == 0
+
+def countEvenOddDigits(num):
+    even, odd = 0, 0
+    while num > 0:
+        rem  = num % 10
+        if rem % 2 == 0:
+            even += 1
+        else:
+            odd += 1
+        num = num // 10
+
+    return f"Even Count: {even} Odd count: {odd} "
+
 nums = 12321
+print(countEvenOddDigits(nums))
+print(countEvenOddDigits(1234))
+print(powerOf2(nums))
+print(powerOf2(16))
+print(productOfDigits(nums)) # 12
 print(isPalindrome(123))
 print(isPalindrome(121))
 print(isPalindrome(nums))
