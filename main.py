@@ -66,7 +66,16 @@ def countEvenOddDigits(num):
 
     return f"Even Count: {even} Odd count: {odd} "
 
+def firstAndLastDigit(num):
+    last_digit = num % 10
+    while num >= 10:
+        num = num // 10
+    first_digit = num
+    return f"fist digit: {first_digit} last digit: {last_digit}"
+
 nums = 12321
+print(firstAndLastDigit(nums))
+print(firstAndLastDigit(12345))
 print(countEvenOddDigits(nums))
 print(countEvenOddDigits(1234))
 print(powerOf2(nums))
