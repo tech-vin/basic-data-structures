@@ -6,4 +6,15 @@ def sumOfDigits(num):
         num = num // 10
     return result
 
-print(sumOfDigits(12312))
+
+def countDigits(num):
+    count = 0
+    while num > 0:
+        rem = num % 10
+        count += 1
+        num = num // 10
+    return count
+
+nums = 12321
+print(countDigits(nums))
+print(sumOfDigits(nums))
